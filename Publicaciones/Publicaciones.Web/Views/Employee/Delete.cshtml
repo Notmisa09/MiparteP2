@@ -1,0 +1,34 @@
+﻿@model Publicaciones.Web.ViewModels.Models.DeleteEmpViewModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="card bg-light col-6 offset-3" style="width:600px; font-family:'Times New Roman', Times, serif">
+    <div class="card-header">
+        <h4>Are you sure you want to delete this employee?</h4>
+        <hr />
+    </div>
+    <div class="card-body">
+        <dl class="row">
+
+            <dt class="col-sm-3">Deleted:</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.Deleted)</dd>
+
+            <dt class="col-sm-3">Employee ID:</dt>
+            <dd class="col-sm-9"> @Html.DisplayFor(model => model.EmpID)</dd>
+
+            <dt class="col-sm-3">ChangeUser:</dt>
+            <dd class="col-sm-9"> @Html.DisplayFor(model => model.ChangeUser)</dd>
+
+            <dt class="col-sm-3">ChangeDate:</dt>
+            <dd class="col-sm-9"> @Html.DisplayFor(model => model.ChangeDate)</dd>
+
+        </dl>
+        <form asp-action="Delete" class="card-footer">
+            <hr />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+        </form>
+    </div>
+</div>
